@@ -4,7 +4,8 @@ A simple POC for setting up corredor server in [corteza](https://github.com/cort
 Include a workflow that interacts with a corredor script. The corredor script updates corteza.
 
 # Demo
-<video src="demo.mp4"></video>
+https://user-images.githubusercontent.com/19151369/193456412-33f8d9e0-7dfa-4bc1-a79c-f4eab2235999.mp4
+
 
 # Install
 Clone this repo and then run 
