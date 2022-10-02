@@ -3,6 +3,18 @@
 A simple POC for setting up corredor server in [corteza](https://github.com/cortezaproject/corteza-server).
 Include a workflow that interacts with a corredor script. The corredor script updates corteza.
 
+See my [forum post](https://forum.cortezaproject.org/t/show-corteza-a-poc-github-repo-for-corredor-server/1058) for a bit of additional context.
+
+# Why
+
+I’ve notice that a lot of people are struggling to set up corredor server.
+
+I also struggled. In the end I got it working (after many hours of debugging and mucking around docker).
+
+To save future community member time and sweat, I’ve created a github repository which enabled you to easily start up an instance of corteza with the corredor server running.
+
+
+
 # Demo
 https://user-images.githubusercontent.com/19151369/193456412-33f8d9e0-7dfa-4bc1-a79c-f4eab2235999.mp4
 
