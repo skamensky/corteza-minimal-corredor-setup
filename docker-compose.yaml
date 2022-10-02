@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  corteza_corredor:
+    build:
+      context: ./corteza_corredor_config
+    volumes:
+      - type: bind
+        source: ./corteza_corredor_config/extensions
+        target: /extensions
+    env_file:
+      - corteza_corredor_config/.env
+  corteza_backend:
+    build:
+        context: ./corteza_config
+    env_file:
+      - corteza_config/.env
+    depends_on: [ corteza_db ]
+    ports: [ "8080:8080"]
+    expose:
+      - "8080"
+    volumes:
+      - type: volume
+        source: corteza_data
+        target: /mnt/corteza_data
+  corteza_db:
+    build:
+      context: postgres_config
+    healthcheck: { test: ["CMD-SHELL", "/bin/bash","/db_initialized.sh"], interval: 10s, timeout: 5s, retries: 5 }
+    volumes:
+      - "corteza_db:/var/lib/postgresql/data"
+    environment:
+      POSTGRES_USER:     corteza
+      POSTGRES_PASSWORD: corteza
+    expose:
+      - "5432"
+    ports:
+      - "54321:5432"
+volumes:
+  corteza_db:
+  corteza_data:
