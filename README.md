@@ -1,7 +1,7 @@
 # What
 
 A simple POC for setting up corredor server in [corteza](https://github.com/cortezaproject/corteza-server).
-Include a workflow that interacts with a corredor script. The corredor script updates corteza.
+The app includes a workflow that interacts with a corredor script. The corredor script updates corteza.
 
 See my [forum post](https://forum.cortezaproject.org/t/show-corteza-a-poc-github-repo-for-corredor-server/1058) for a bit of additional context.
 
