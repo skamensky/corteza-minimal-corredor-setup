@@ -4,14 +4,12 @@ export default {
 
     triggers ({ on }) {
         return on('manual')
-            // vv Don't remove the next line vv
+            .for('compose:record')
             .uiProp('app', 'compose')
     },
 
     // If you don't need the Compose helper, remove it
     async exec (args, { Compose }) {
-        console.log('exec called')
-        console.log(args)
-        console.log(Compose)
+        alert(`The current account name is: ${args.$record.values.AccountName}`)
     },
 }
